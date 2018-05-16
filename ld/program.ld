@@ -114,6 +114,18 @@ SECTIONS
     *libc.a:*lock.o(.literal .text .literal.* .text.*)
 
     *libc.a:*printf.o(.literal .text .literal.* .text.*)
+/*   *libc.a:*printf.o(.literal .text .literal.* .text.*)
+      https://github.com/SuperHouse/esp-open-rtos/issues/623
+    move large lib_a-svfwprintf to flash, keep other printf's in IRAM:
+*/
+
+    *libc.a:*-printf.o(.literal .text .literal.* .text.*)
+    *libc.a:*-sprintf.o(.literal .text .literal.* .text.*)
+    *libc.a:*-fprintf.o(.literal .text .literal.* .text.*)
+    *libc.a:*-svfprintf.o(.literal .text .literal.* .text.*)
+    *libc.a:*-vfprintf.o(.literal .text .literal.* .text.*)
+
+
     *libc.a:*findfp.o(.literal .text .literal.* .text.*)
     *libc.a:*fputwc.o(.literal .text .literal.* .text.*)
 
