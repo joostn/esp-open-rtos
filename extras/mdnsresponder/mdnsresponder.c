@@ -38,9 +38,9 @@
 #error "LWIP_IGMP needs to be defined in lwipopts.h"
 #endif
 
-#define qDebugLog             // Log activity generally
-#define qLogIncoming          // Log all arriving multicast packets
-#define qLogAllTraffic        // Log and decode all mDNS packets
+// #define qDebugLog             // Log activity generally
+// #define qLogIncoming          // Log all arriving multicast packets
+// #define qLogAllTraffic        // Log and decode all mDNS packets
 
 //-------------------------------------------------------------------
 
